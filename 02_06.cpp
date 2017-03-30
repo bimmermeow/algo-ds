@@ -6,8 +6,8 @@ int main(void)
 {
 	int B;
 	int A;
-	cout << "Kleinster gemeinsamer Teiler" <<
-	endl << "============================" << endl <<
+	cout << "Größter gemeinsamer Teiler" <<
+	endl << "==========================" << endl <<
 	endl << "Geben sie die erste Zahl an: ";
 	cin >> A;
 	cout << "       Und jetzt die Zweite: ";

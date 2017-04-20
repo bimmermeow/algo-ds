@@ -4,7 +4,7 @@ using namespace std;
 
 int Tn(int n) {
   if(n==1) return 1;
-  return n*T(n-1)+n;
+  return n*Tn(n-1)+n;
 }
 int Tni(int n) {
   int e=1;
@@ -21,5 +21,5 @@ int main() {
     cout << Tn(i) << endl;
     cout << Tni(i) << endl;
   }
+  return 0;
 }
-    

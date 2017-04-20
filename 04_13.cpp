@@ -26,7 +26,7 @@ long fibonacci_o(int n) {
 	for(int i = 3;i<=n;i++) {
 		fnm2 = fnm1;
 		fnm1 = x;
-		x = i*fnm1-fnm2;
+		x = fnm1+fnm2;
 	}
 	return x;
 }

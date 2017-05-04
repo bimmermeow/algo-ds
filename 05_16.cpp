@@ -1,21 +1,23 @@
 #include <iostream>
-#include "stack.cpp"
-using namespace std;
+#include <stack>
+// using namespace std;
 
 
 int main() {
-	Stack<int> stack;
-	stack.push(3);
-	cout << stack.top() << endl;
-	stack.push(4);
-	cout << stack.top() << endl;
-	stack.push(12);
-	cout << stack.top() << endl;
-	cout << stack.top() << endl;
-	// cout << stack.length() << endl;
-	cout << stack.pop() << endl;
-	cout << stack.pop() << endl;
-	// cout << stack.pop() << endl;
-	// cout << stack.pop() << endl;
+	std::stack<int> s;
+	s.push(3);
+	std::cout << s.top() << std::endl;
+	s.push(4);
+	std::cout << s.top() << std::endl;
+	s.push(12);
+	std::cout << s.top() << std::endl;
+	// cout << s.length() << endl;
+	s.pop();
+	std::cout << s.top() << std::endl;
+	s.pop();
+	std::cout << s.top() << std::endl;
+	s.pop();
+	// cout << s.pop() << endl;
+	// cout << s.pop() << endl;
 	return 0;
 }

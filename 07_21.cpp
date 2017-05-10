@@ -19,6 +19,11 @@ public:
 		tail =0;
 		head=0;
 	}
+	~Tabelle() {
+		while(iterator!=0) {
+			delete_node();
+		}
+	}
 	//Fügt vor dem iterator an
 	bool insert(item_type r) {
 		node* knoten = new node();

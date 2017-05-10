@@ -82,6 +82,32 @@ public:
 		iterator = iterator->next;
 		return true;
 	}
+	//delete setzt iterator normalerweise auf den record davor
+	bool delete_node() {
+		if(iterator==0) return false;
+		if(iterator==tail) {
+			// cout << "iterator = tail" << endl;
+			iterator = tail->next;
+			iterator->prev = 0;
+			delete tail;
+			tail = iterator;
+			return true;
+		}
+		if(iterator==head) {
+			// cout << "iterator = tail" << endl;
+			iterator = head->prev;
+			iterator->next = 0;
+			delete head;
+			head = iterator;
+			return true;
+		}
+		iterator->prev->next = iterator->next;
+		iterator->next->prev = iterator->prev;
+		node* i_prev = iterator->prev;
+		delete iterator;
+		iterator = i_prev;
+		return true;
+	}
 	item_type getNode() {
 		return iterator->item;
 	}
@@ -120,7 +146,12 @@ int main() {
 	cout << "setze auf 10" << endl;
 	t.setNode(10);
 	cout << t.getNode() << endl;
-	cout << "first: " << t.first() << endl;
+	cout << "delete: " << endl;
+	t.delete_node();
 	cout << t.getNode() << endl;
-
+	t.next();
+	cout << t.getNode() << endl;
+	cout << "delete: " << endl;
+	t.delete_node();
+	cout << t.getNode() << endl;
 }

@@ -109,6 +109,7 @@ vector<int> bubbleSort(vector<int> A) {
 }
 int main () {
 	vector<int> array {0, 10, 20, 1, 11, 21, 2, 12, 22};
+
 	insertionsort(array);
 	selectionsort(array);
 	bubbleSort(array);
